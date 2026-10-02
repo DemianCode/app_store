@@ -14,7 +14,7 @@ Android apps I've made, free to download and try.
 <!-- apps:start -->
 | App | What it does | Version | Download |
 | --- | --- | --- | --- |
-| **Hermano Mano** | An endless-runner game starring Hermano the dog — dodge, jump and snack your way up the footpath — plus a tracker for logging the dogs' meals and walks. | 0.1.0.7 | [hermano-mano-0.1.0.7.apk](https://github.com/DemianCode/app_store/releases/download/hermano-mano-v0.1.0.7/hermano-mano-0.1.0.7.apk) (23.5 MB) |
+| **Hermano Mano** | An endless-runner game starring Hermano the dog — dodge, jump and snack your way up the footpath — plus a tracker for logging the dogs' meals and walks. | 0.1.0.13 | [hermano-mano-0.1.0.13.apk](https://github.com/DemianCode/app_store/releases/download/hermano-mano-v0.1.0.13/hermano-mano-0.1.0.13.apk) (19.1 MB) |
 | **EduDrop** | Offline classroom tool: the teacher's phone runs a local server and pushes lessons to students' browsers over local Wi-Fi. No internet, no accounts, no student app. | 0.1.0.9 | [edudrop-0.1.0.9.apk](https://github.com/DemianCode/app_store/releases/download/edudrop-v0.1.0.9/edudrop-0.1.0.9.apk) (32.6 MB) |
 | **Cardio** | A card table: five solitaire games (Klondike, Spider, FreeCell, TriPeaks, Pyramid) plus Thirteen, Canasta, Texas Hold'em and 500 against computer players. | 1.1.0 | [cardio-1.1.0.apk](https://github.com/DemianCode/app_store/releases/download/cardio-v1.1.0/cardio-1.1.0.apk) (1.5 MB) |
 <!-- apps:end -->
