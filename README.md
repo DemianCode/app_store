@@ -29,10 +29,36 @@ By installing an app you agree to the warning at the top of this page.
    **Install**.
 
 These are one-off downloads: the app won't update itself. To get a newer version, come back here
-and download it again. Some apps are test builds; if Android says *"App not installed"* when you
+and download it again, or use [Obtainium](#get-automatic-updates-with-obtainium) to be notified. Some apps are test builds; if Android says *"App not installed"* when you
 already have an older copy, uninstall the old one first (this clears the app's data).
 
 All downloads are also listed on the [Releases page](../../releases).
+
+## Get automatic updates with Obtainium
+
+[Obtainium](https://github.com/ImranR98/Obtainium) can install these apps and tell you when a new
+version is out, so you don't have to come back and re-download by hand.
+
+All the apps share this one repo, so add each app to Obtainium separately and tell it which one
+you want with a filter:
+
+1. In Obtainium, tap **Add App** and enter `https://github.com/DemianCode/app_store`.
+2. Open **Additional Options** and turn on **Filter APKs by regular expression**.
+3. Enter the pattern for the app (below), then tap **Add**.
+4. Repeat for each app you want, with its own pattern.
+
+| App | APK filter |
+| --- | --- |
+| Hermano Mano | `^hermano-mano-` |
+| EduDrop | `^edudrop-` |
+| Cardio | `^cardio-` |
+
+Without the filter, Obtainium treats every release in the repo as one app and may offer one app's
+version as an update for another.
+
+The same warning as above applies, and so does the test-build note: if Android refuses an update
+with *"App not installed"*, uninstall the old copy first (this clears the app's data) and let
+Obtainium install it again.
 
 ## Maintaining this repo
 
