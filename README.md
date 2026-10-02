@@ -2,6 +2,13 @@
 
 Android apps I've made, free to download and try.
 
+> [!WARNING]
+> **Install these apps at your own risk.** They are personal projects, provided "as is" with no
+> warranty of any kind, and many are early or test builds that may have bugs. By downloading or
+> installing any app here, you accept full responsibility for doing so. I accept no
+> responsibility or liability for any loss, damage or other issues, including to your device or
+> your data, that arise from downloading, installing or using them.
+
 ## Apps
 
 <!-- apps:start -->
@@ -11,6 +18,8 @@ Android apps I've made, free to download and try.
 <!-- apps:end -->
 
 ## How to install
+
+By installing an app you agree to the warning at the top of this page.
 
 1. On your Android phone, tap the download link for the app you want.
 2. Open the downloaded `.apk` file (from the notification, or your **Downloads** folder).

@@ -139,6 +139,13 @@ def release_notes(app, version, source_rel, sha256):
             "> Android may refuse to install this one over it: uninstall the old one first (that",
             "> clears the app's data).",
         ]
+    lines += [
+        "",
+        "> [!WARNING]",
+        "> **Install at your own risk.** This app is provided \"as is\", with no warranty of any",
+        "> kind. No responsibility or liability is accepted for any loss, damage or other issues,",
+        "> including to your device or data, arising from downloading, installing or using it.",
+    ]
     return "\n".join(lines) + "\n"
 
 
