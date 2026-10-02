@@ -1,0 +1,50 @@
+name: Sync app releases
+
+# Copies the latest APK of every app listed in apps.json from its private repo into this repo's
+# releases, and refreshes the table in README.md. See "Maintaining this repo" in the README.
+on:
+  schedule:
+    - cron: "17 */6 * * *" # every six hours
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [apps.json, scripts/sync_releases.py, .github/workflows/sync-releases.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-releases
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the source token is set
+        env:
+          SOURCE_TOKEN: ${{ secrets.SOURCE_REPOS_TOKEN }}
+        run: |
+          if [ -z "$SOURCE_TOKEN" ]; then
+            echo "::error::Add a SOURCE_REPOS_TOKEN secret that can read the app repos. See README.md."
+            exit 1
+          fi
+
+      - name: Mirror releases
+        env:
+          SOURCE_TOKEN: ${{ secrets.SOURCE_REPOS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/sync_releases.py
+
+      - name: Commit README
+        run: |
+          if git diff --quiet README.md; then
+            echo "README.md unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update app list"
+          git push
